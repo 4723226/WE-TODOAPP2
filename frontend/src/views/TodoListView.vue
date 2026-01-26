@@ -2,7 +2,12 @@
     import { useTodosStore } from '../stores/todoStore';
     import AddTodo from '../components/AddTodo.vue';
     import { RouterLink } from 'vue-router';
+    import { onMounted } from 'vue';
     const todoStore = useTodosStore();
+
+    onMounted(() => {
+        todoStore.fetchTodos();
+    });
 </script>
 
 <template>

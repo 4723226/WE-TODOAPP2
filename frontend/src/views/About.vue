@@ -1,7 +1,9 @@
 <script setup lang="ts">
     import { useTodosStore } from '../stores/todoStore';
     import AddTodo from '../components/AddTodo.vue';
+    import { useRouter } from 'vue-router';
     const todoStore = useTodosStore();
+    const router = useRouter();
 </script>
 <template>
 <section>
@@ -16,7 +18,7 @@
         <span :style="{ textDecoration: todo.completed ? 'line-through' : 'none' }">
         {{ todo.title }}
         </span>
-        <button v-on:click="/about">About</button>
+        <button @click="router.push('/about')">About</button>
     </li>
     </ul>
 </section>

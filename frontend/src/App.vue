@@ -25,6 +25,6 @@ import { RouterView, RouterLink } from 'vue-router';
   #main-content { 
     padding: 1rem; 
     border-style: solid; 
-    border-width: 2px; 
+    border-width: 4px; 
   }
 </style>
